@@ -1,26 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Dekko&display=swap");
+
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body,
+#__next {
+  height: 100%;
+  font-family: "Dekko", cursive;
+  font-size: 20px;
+  overflow: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.background {
+  height: 100%;
+  width: 100%;
 }
 
-* {
-  box-sizing: border-box;
+.vs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60vw, 450px);
+  height: min(60vw, 450px);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.ben {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+}
+
+.eddie {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.name {
+  font-family: "Bangers";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 106px;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #000000;
+  text-stroke: 2px #000000;
+  text-shadow: 2px 4px 0px rgba(17, 17, 17, 0.85);
+}
+
+button {
+  width: 135px;
+  height: 40px;
+
+  background: #ffe924;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.85);
+
+  font-family: "Dekko";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(5px, 5px);
+}
+
+.text-and-bubble {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.ben .bubble {
+  margin-bottom: 32px;
+}
+
+.ben button {
+  margin-top: 12px;
+  margin-left: 24px;
+}
+
+.eddie button {
+  margin-top: 12px;
+}
+
+.eddie .name {
+  margin-right: 24px;
+}
+
+.bubble-and-button {
+  display: flex;
+  align-items: flex-start;
 }
