@@ -6,7 +6,7 @@ type Score = {
 
 let score: Score;
 
-fs.readFile("score.json", "utf8", (err, data) => {
+fs.readFile("public/score.json", "utf8", (err, data) => {
   if (err) {
     console.log(err);
   } else {
@@ -20,7 +20,7 @@ const getScore = () => {
 
 const setScore = (newScore: Score) => {
   score = newScore;
-  fs.writeFile("score.json", JSON.stringify(score), "utf8", (err) => {
+  fs.writeFile("public/score.json", JSON.stringify(score), "utf8", (err) => {
     if (err) console.log(err);
   });
 };
